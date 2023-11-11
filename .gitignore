@@ -1,0 +1,7 @@
+node_modules
+
+functions
+node_modules
+packagelock.json
+# Local Netlify folder
+.netlify
