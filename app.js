@@ -8,10 +8,12 @@ const sqlite3 = require('sqlite3').verbose();
 const flash = require('express-flash');
 const swaggerJsdoc = require("swagger-jsdoc");
 const  swaggerUi = require("swagger-ui-express");
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
+app.use(cors()); // Add this line
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: false }));
